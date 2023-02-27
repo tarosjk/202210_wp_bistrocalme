@@ -1,8 +1,9 @@
 <?php
 /**
- * titleタグを出力する
+ * テーマサポートを有効化する
  */
-add_theme_support('title-tag');
+add_theme_support('title-tag'); //titleタグ
+add_theme_support('post-thumbnails'); //アイキャッチ画像
 
 function my_document_title_separator($separator) {
   $separator = '|';
