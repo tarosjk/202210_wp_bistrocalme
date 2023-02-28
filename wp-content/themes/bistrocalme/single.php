@@ -45,14 +45,7 @@
 
 				<div class="col-12 col-md-3">
 					<?php get_sidebar('categories'); ?>
-
-					<aside class="archive">
-						<h2 class="archive_title">月別アーカイブ</h2>
-						<ul class="archive_list">
-							<li><a href="#">2019年4月</a></li>
-							<li><a href="#">2019年5月</a></li>
-						</ul>
-					</aside>
+          <?php get_sidebar('archives'); ?>   
 				</div>
 			</div>
 		</div>
