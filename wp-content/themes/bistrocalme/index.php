@@ -6,198 +6,20 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-9">
+					<?php if( is_month() ): ?>
+					<h2 class="main_title"><?php the_time('Y年m月'); ?></h2>
+					<?php else: ?>
 					<h2 class="main_title"><?php wp_title(''); ?></h2>
+					<?php endif; ?>
 					<div class="row">
 
-						<div class="col-md-4">
-							<article class="news">
-								<div class="news_pic">
-									<a href="#">
-										<img src="./assets/img/home/news_img-1.jpg" alt="">
-									</a>
-								</div>
-								<div class="news_meta">
-									<ul class="post-categories">
-										<li><a href="#">お知らせ</a></li>
-									</ul>
-									<time class="news_time" datetime="2019-00-00">2019年00月00日</time>
-								</div>
-								<h2 class="news_title"><a href="#">タイトルタイトルタイトル</a></h2>
-								<div class="news_desc">
-									<p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
-									<p><a href="#">[続きを読む]</a></p>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4">
-							<article class="news">
-								<div class="news_pic">
-									<a href="#">
-										<img src="./assets/img/home/news_img-2.jpg" alt="">
-									</a>
-								</div>
-								<div class="news_meta">
-									<ul class="post-categories">
-										<li><a href="#">お知らせ</a></li>
-									</ul>
-									<time class="news_time" datetime="2019-00-00">2019年00月00日</time>
-								</div>
-								<h2 class="news_title"><a href="#">タイトルタイトルタイトル</a></h2>
-								<div class="news_desc">
-									<p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
-									<p><a href="#">[続きを読む]</a></p>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4">
-							<article class="news">
-								<div class="news_pic">
-									<a href="#">
-										<img src="./assets/img/home/news_img-3.jpg" alt="">
-									</a>
-								</div>
-								<div class="news_meta">
-									<ul class="post-categories">
-										<li><a href="#">お知らせ</a></li>
-									</ul>
-									<time class="news_time" datetime="2019-00-00">2019年00月00日</time>
-								</div>
-								<h2 class="news_title"><a href="#">タイトルタイトルタイトル</a></h2>
-								<div class="news_desc">
-									<p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
-									<p><a href="#">[続きを読む]</a></p>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4">
-							<article class="news">
-								<div class="news_pic">
-									<a href="#">
-										<img src="./assets/img/home/news_img-1.jpg" alt="">
-									</a>
-								</div>
-								<div class="news_meta">
-									<ul class="post-categories">
-										<li><a href="#">お知らせ</a></li>
-									</ul>
-									<time class="news_time" datetime="2019-00-00">2019年00月00日</time>
-								</div>
-								<h2 class="news_title"><a href="#">タイトルタイトルタイトル</a></h2>
-								<div class="news_desc">
-									<p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
-									<p><a href="#">[続きを読む]</a></p>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4">
-							<article class="news">
-								<div class="news_pic">
-									<a href="#">
-										<img src="./assets/img/home/news_img-2.jpg" alt="">
-									</a>
-								</div>
-								<div class="news_meta">
-									<ul class="post-categories">
-										<li><a href="#">お知らせ</a></li>
-									</ul>
-									<time class="news_time" datetime="2019-00-00">2019年00月00日</time>
-								</div>
-								<h2 class="news_title"><a href="#">タイトルタイトルタイトル</a></h2>
-								<div class="news_desc">
-									<p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
-									<p><a href="#">[続きを読む]</a></p>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4">
-							<article class="news">
-								<div class="news_pic">
-									<a href="#">
-										<img src="./assets/img/home/news_img-3.jpg" alt="">
-									</a>
-								</div>
-								<div class="news_meta">
-									<ul class="post-categories">
-										<li><a href="#">お知らせ</a></li>
-									</ul>
-									<time class="news_time" datetime="2019-00-00">2019年00月00日</time>
-								</div>
-								<h2 class="news_title"><a href="#">タイトルタイトルタイトル</a></h2>
-								<div class="news_desc">
-									<p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
-									<p><a href="#">[続きを読む]</a></p>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4">
-							<article class="news">
-								<div class="news_pic">
-									<a href="#">
-										<img src="./assets/img/home/news_img-1.jpg" alt="">
-									</a>
-								</div>
-								<div class="news_meta">
-									<ul class="post-categories">
-										<li><a href="#">お知らせ</a></li>
-									</ul>
-									<time class="news_time" datetime="2019-00-00">2019年00月00日</time>
-								</div>
-								<h2 class="news_title"><a href="#">タイトルタイトルタイトル</a></h2>
-								<div class="news_desc">
-									<p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
-									<p><a href="#">[続きを読む]</a></p>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4">
-							<article class="news">
-								<div class="news_pic">
-									<a href="#">
-										<img src="./assets/img/home/news_img-2.jpg" alt="">
-									</a>
-								</div>
-								<div class="news_meta">
-									<ul class="post-categories">
-										<li><a href="#">お知らせ</a></li>
-									</ul>
-									<time class="news_time" datetime="2019-00-00">2019年00月00日</time>
-								</div>
-								<h2 class="news_title"><a href="#">タイトルタイトルタイトル</a></h2>
-								<div class="news_desc">
-									<p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
-									<p><a href="#">[続きを読む]</a></p>
-								</div>
-							</article>
-						</div>
-
-
-						<div class="col-md-4">
-							<article class="news">
-								<div class="news_pic">
-									<a href="#">
-										<img src="./assets/img/home/news_img-3.jpg" alt="">
-									</a>
-								</div>
-								<div class="news_meta">
-									<ul class="post-categories">
-										<li><a href="#">お知らせ</a></li>
-									</ul>
-									<time class="news_time" datetime="2019-00-00">2019年00月00日</time>
-								</div>
-								<h2 class="news_title"><a href="#">タイトルタイトルタイトル</a></h2>
-								<div class="news_desc">
-									<p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
-									<p><a href="#">[続きを読む]</a></p>
-								</div>
-							</article>
-						</div>
+						<?php if( have_posts() ): ?>
+							<?php while( have_posts() ): the_post(); ?>
+							<div class="col-md-4">
+								<?php get_template_part('template-parts/loop', 'news'); ?>
+							</div>
+							<?php endwhile; ?>
+						<?php endif; ?>
 
 					</div>
 				</div>
