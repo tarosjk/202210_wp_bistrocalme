@@ -32,25 +32,20 @@
 				<h1><a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/assets/img/common/logo@2x.png" alt="BISTRO CALME"></a></h1>
 			</div>
 
-			<div class="header_desc">
+			<div class="header_desc" action="">
 				<p><?php bloginfo('description'); ?></p>
 			</div>
 
-			<form class="header_search">
-				<input type="text" placeholder="キーワードを入力">
-				<i class="fas fa-search"></i>
-			</form>
+			<?php get_search_form(); ?>
 		</div>
 
 		<div class="header_links">
 			<nav class="gnav">
-				<ul class="">
-					<li><a href="#">HOME</a></li>
-					<li><a href="#">わたしたちについて</a></li>
-					<li><a href="#">アクセス</a></li>
-					<li><a href="#">最新情報</a></li>
-					<li><a href="#">お問い合わせ</a></li>
-				</ul>
+				<?php wp_nav_menu([
+					'menu' => 'global-navigation',
+					'menu_class' => '',
+					'container' => '',
+				]); ?>
 			</nav>
 
 			<ul class="header_sns">
