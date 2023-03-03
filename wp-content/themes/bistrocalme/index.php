@@ -11,6 +11,7 @@
 					<?php else: ?>
 					<h2 class="main_title"><?php wp_title(''); ?></h2>
 					<?php endif; ?>
+
 					<div class="row">
 
 						<?php if( have_posts() ): ?>
@@ -22,6 +23,13 @@
 						<?php endif; ?>
 
 					</div>
+
+					<?php
+						if( function_exists('wp_pagenavi') ) {
+							wp_pagenavi();
+						}
+					?>
+
 				</div>
 
 				<div class="col-12 col-md-3">
