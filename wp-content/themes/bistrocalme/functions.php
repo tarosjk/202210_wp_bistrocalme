@@ -20,3 +20,16 @@ function my_document_title_parts($title) {
   return $title;
 }
 add_filter('document_title_parts', 'my_document_title_parts');
+
+
+function my_comment_form_default_fields($args) {
+  // echo '<pre>';
+  // var_dump($args);
+  // echo '</pre>';
+  $args['author'] = ''; //名前
+  $args['email'] = ''; //メールアドレス
+  $args['url'] = '';// サイトアドレス
+
+  return $args;
+}
+add_filter('comment_form_default_fields', 'my_comment_form_default_fields');
