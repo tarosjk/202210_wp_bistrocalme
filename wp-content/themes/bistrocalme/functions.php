@@ -5,6 +5,7 @@
 add_theme_support('title-tag'); //titleタグ
 add_theme_support('post-thumbnails'); //アイキャッチ画像
 add_theme_support('menus'); //メニュー機能
+add_theme_support('html5'); //HTML5にタグを変換
 
 function my_document_title_separator($separator) {
   $separator = '|';
