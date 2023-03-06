@@ -49,3 +49,11 @@ function my_pre_get_posts($query) {
   }
 }
 add_action('pre_get_posts', 'my_pre_get_posts');
+
+
+function my_wpautop() {
+  if( is_page('contact') ) {
+    remove_filter('the_content', 'wpautop');
+  }
+}
+add_action('wp','my_wpautop');

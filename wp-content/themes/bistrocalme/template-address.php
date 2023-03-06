@@ -3,9 +3,6 @@
 template name: 住所付きテンプレート
 description: サイドバーに住所も表示されるテンプレート
 */
-if( is_page('contact') ) {
-	remove_filter('the_content', 'wpautop');
-}
 ?>
 <?php get_header(); ?>
 
