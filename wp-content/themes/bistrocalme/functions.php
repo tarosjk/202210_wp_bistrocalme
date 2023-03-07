@@ -57,3 +57,10 @@ function my_wpautop() {
   }
 }
 add_action('wp','my_wpautop');
+
+
+function my_editor_support() {
+  add_theme_support('editor-styles');//must
+  add_editor_style('assets/css/editor-style.css'); //default: editor-style.css
+}
+add_action('admin_init', 'my_editor_support');
