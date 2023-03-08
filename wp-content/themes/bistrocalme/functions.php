@@ -64,3 +64,12 @@ function my_editor_support() {
   add_editor_style('assets/css/editor-style.css'); //default: editor-style.css
 }
 add_action('admin_init', 'my_editor_support');
+
+
+function my_require_login() {
+  global $pagenow;
+  if( !is_user_logged_in() && $pagenow !== 'wp-login.php' ) {
+    auth_redirect();//ログインページ or 管理ページに飛ばす
+  }
+}
+add_action('init', 'my_require_login');
