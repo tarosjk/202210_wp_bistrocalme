@@ -72,4 +72,4 @@ function my_require_login() {
     auth_redirect();//ログインページ or 管理ページに飛ばす
   }
 }
-add_action('init', 'my_require_login');
+// add_action('init', 'my_require_login');
