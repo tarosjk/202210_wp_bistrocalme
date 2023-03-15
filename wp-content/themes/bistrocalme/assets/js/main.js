@@ -23,3 +23,7 @@ jQuery(function($) {
         }, 500);
     });
 });
+
+Fancybox.bind("[data-fancybox]", {
+// Your custom options
+});

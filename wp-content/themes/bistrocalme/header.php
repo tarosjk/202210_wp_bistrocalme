@@ -11,13 +11,25 @@
     'font-awesome',
     'https://use.fontawesome.com/releases/v5.6.1/css/all.css'
   ); ?>
+
+	<?php
+	// 投稿詳細ページのみ
+	if(is_single()) {
+		wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css');
+	}
+	?>
 	
   <?php wp_enqueue_script('jquery'); ?>
-  <?php wp_enqueue_script(
-    'bisro-calme-main', 
-    get_template_directory_uri() . '/assets/js/main.js'
-  ); ?>
-  
+	<?php
+	if(is_single()) {
+		wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', [], false, true);
+	}
+	?>
+  <?php
+	wp_enqueue_script(
+    'bistro-calme-main',
+    get_template_directory_uri() . '/assets/js/main.js', [], false, true);
+	?>
 
   <?php wp_head(); ?>
 </head>

@@ -24,6 +24,53 @@
                   <?php the_content(); ?>
                 </div>
 
+                <h3>カスタムフィールド</h3>
+                <div>
+                  <?php
+                  $custom_fields = get_post_meta(get_the_ID(), 'test_field');
+
+                  // var_dump($custom_fields);
+                  echo $custom_fields[0];
+                  ?>
+                </div>
+                <div>
+                <?php
+                  $img_id = SCF::get('main_visual');
+                  // var_dump($img_id);
+                  $img_url = wp_get_attachment_url($img_id);
+                  $img_md = wp_get_attachment_image($img_id, 'medium');
+                  // var_dump($img_url);
+                  // var_dump($img_url_md);
+                ?>
+                <?= $img_md; ?>
+                <img src="<?= $img_url; ?>">
+                </div>
+                <p>
+                  <?= SCF::get('desc'); ?>
+                </p>
+                <div>
+                  <ul>
+                  <?php
+                    $app_lang = SCF::get('app_lang');
+                    // var_dump($app_lang);
+                    foreach($app_lang as $val) {
+                      echo "<li>{$val}</li>";
+                    }
+                  ?>
+                  </ul>
+                </div>
+                <div>
+                  <?php
+                    $gallery = SCF::get('gallery');
+                    // var_dump($gallery);
+                  ?>
+                  <?php foreach($gallery as $galitem): ?>
+                  <a href="<?= wp_get_attachment_image_url($galitem['gallery_img'], 'full'); ?>" data-fancybox="gallery">
+                    <img src="<?= wp_get_attachment_image_url($galitem['gallery_img']); ?>" alt="">
+                  </a>
+                  <?php endforeach; ?>
+                </div>
+
                 <?php comments_template(); ?>
 
               </div>
