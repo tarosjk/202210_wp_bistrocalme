@@ -15,23 +15,31 @@
 		</header>
 
 		<div class="row">
-
-			<?php if (have_posts()) : ?>
-				<?php while (have_posts()) : the_post(); ?>
+		<?php
+			$args = [
+				'post_type' => 'post',
+				'posts_per_page' => 3,
+			];
+			$latest_posts = new WP_Query($args);
+		?>
+			<?php if ($latest_posts->have_posts()) : ?>
+				<?php while ($latest_posts->have_posts()) : $latest_posts->the_post(); ?>
 					<div class="col-md-4">
 						<?php get_template_part('template-parts/loop', 'news'); ?>
 					</div>
-				<?php endwhile; ?>
+				<?php endwhile;
+				wp_reset_postdata();
+				?>
 			<?php endif; ?>
 
 		</div>
 
 		<p class="sec_btn">
 			<?php
-				$news = get_term_by('slug', 'news', 'category');
-				$news_link = get_term_link($news, 'category');
+				// $news = get_term_by('slug', 'news', 'category');
+				// $news_link = get_term_link($news, 'category');
 			?>
-			<a href="<?= $news_link; ?>" class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a>
+			<a href="<?= home_url('/blog') ?>" class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a>
 		</p>
 
 	</div>
